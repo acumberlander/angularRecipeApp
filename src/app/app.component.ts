@@ -1,13 +1,14 @@
-import { Component } from "@angular/core";
+import {Component, ElementRef} from '@angular/core';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = "angularRecipeApp";
-  loadedFeature = "recipe";
+  title = 'angularRecipeApp';
+  loadedFeature = 'recipe';
+  elementRef: ElementRef;
 
   onNavigation(feature: string) {
     this.loadedFeature = feature;
